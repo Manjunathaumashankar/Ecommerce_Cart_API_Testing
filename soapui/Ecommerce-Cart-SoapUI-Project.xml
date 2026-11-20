@@ -1,0 +1,2108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ff6837a3-83ab-4e08-af5b-649bfa4c656b" activeEnvironment="Default" name="Ecommerce-Cart-API-Testing" resourceRoot="" soapui-version="5.10.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings/>
+  <con:properties>
+    <con:property>
+      <con:name>baseUrl</con:name>
+      <con:value>http://127.0.0.1:5000</con:value>
+    </con:property>
+    <con:property>
+      <con:name>defaultProductId</con:name>
+      <con:value>1</con:value>
+    </con:property>
+    <con:property>
+      <con:name>defaultCoupon</con:name>
+      <con:value>SAVE10</con:value>
+    </con:property>
+  </con:properties>
+  <con:interface xsi:type="con:RestService" id="b9110ac4-f5d1-4438-9a7b-22146ab86b46" wadlVersion="http://wadl.dev.java.net/2009/02" name="Ecommerce API" type="rest" basePath="">
+    <con:settings/>
+    
+    <con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
+      <con:endpoint>${#Project#baseUrl}</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Home" path="/" id="e26cc609-9ab7-49a9-8274-941da98d9c36">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET" id="1ba3aa74-5049-4dc1-907d-6e1a4d617957" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="GET Request" id="e7edbd56-0f6d-4065-a553-6738923cc2b3" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Products" path="/products" id="e31a0b36-f137-4555-9248-bcd76a9d49a9">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET" id="b1311ac2-8481-44f8-8c87-c299be7428f5" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="GET Request" id="cd5b2d05-de0e-471d-8fce-74a0809bb074" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Product_1" path="/products/1" id="630c94f8-3fb5-4042-9adb-38369d14a2c2">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET" id="e45c68b3-d486-4bfd-b3ed-9dde463216f4" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="GET Request" id="389b85b8-5080-4c67-aa8b-6ffbd3c462b4" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Product_2" path="/products/2" id="665f1335-7b04-495f-b620-9810dacd8b96">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET" id="249d8826-5d82-4f09-b408-1f8365d07a77" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="GET Request" id="a86a6e65-d620-4034-9267-7b8920f67898" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Product_999" path="/products/999" id="e1bee991-1b86-47c4-b285-dd2901c75499">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET" id="17d56ab3-8c84-4ea1-b0e3-2e9db4fd216c" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="GET Request" id="9d7d787c-b299-4ac4-bc8c-906b519e9f6e" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Cart" path="/cart" id="28b59464-88fe-4139-8457-e4d2ee50add1">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET" id="b58a6fd8-03be-460e-ba26-bfff5bc2ea5e" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="GET Request" id="affe45bb-1b6e-4e0c-9bbd-404f700bb22e" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+      <con:method name="POST" id="0f6a9b03-8b30-4f95-8ff0-651a2953a02f" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="POST Request" id="b1729526-441e-490e-92e3-61cc66aff987" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+      <con:method name="DELETE" id="19af0a2b-e89e-48a4-9a57-28db336ad438" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="DELETE Request" id="8f917908-6b92-45dd-9cf5-aefe73b1b01e" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="CartItem_1" path="/cart/1" id="fe4a8a94-dcc6-491a-90c8-18d0a42c0e7e">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="PUT" id="575c1150-1ff5-4a91-a186-ad0de96ab3e5" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="PUT Request" id="d50805e7-0339-48b5-9f6a-682858851ac7" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+      <con:method name="DELETE" id="5aafed4b-084e-4548-b7da-109933934b9d" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="DELETE Request" id="18045009-445d-4947-bad9-a9c1ab9390a5" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="CartItem_2" path="/cart/2" id="58cecb20-dd5c-41af-986e-ddfd8ca114a2">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="PUT" id="80522ce9-dbb3-4dee-8d4c-c6136738d55f" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="PUT Request" id="6cad0eb2-5562-4c40-a49c-5a9e2e260486" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+      <con:method name="DELETE" id="a1ba6c9e-9528-40be-8bec-195a32458457" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="DELETE Request" id="0383a092-706c-4970-8051-f454120531bd" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="CartItem_3" path="/cart/3" id="085bebcb-ddb6-451f-8a62-362015d1e2db">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="PUT" id="ea62eade-cc0b-4445-83e8-86bdd1bb3421" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="PUT Request" id="2387c536-eb2e-4abd-9817-d9cbc9f60a69" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+      <con:method name="DELETE" id="04a392aa-3d03-4cc8-b2f8-801c84178bff" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="DELETE Request" id="53d5a377-7e46-417f-b312-558dbf4c4862" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="CartItem_888" path="/cart/888" id="3a8b4722-0e59-440b-a903-69ca7acf72d3">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="PUT" id="7ca7540e-3d6a-4ad0-988b-8eabe7010681" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="PUT Request" id="b4eb228a-2e48-483b-aa74-f4f6dcccfa3a" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+      <con:method name="DELETE" id="b5fd4465-222a-4d2a-b2ab-849ba5c71e22" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="DELETE Request" id="f4994d52-d925-4b33-8fb8-79f8a9f4e5dd" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Coupons" path="/coupons" id="1a2c3a8c-227c-4df9-aa81-a821c109eef7">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET" id="f8114bab-4039-452f-b792-7e69d0b89868" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="GET Request" id="ad474f17-664d-4556-8972-f62c118d3fd0" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="ApplyCoupon" path="/cart/apply-coupon" id="fc3aced1-c0ef-4e8c-8cf7-bf284a5ea894">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="POST" id="c61e2638-91d4-4b2c-9a54-ca5c674249f1" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="POST Request" id="54e33807-34ef-410b-99ea-db72078cd9b0" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="RemoveCoupon" path="/cart/coupon" id="377e4923-f3a9-46ce-8fb8-b5c956b6f89c">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="DELETE" id="becb5b89-a64c-441d-b563-06118c88ecbe" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="DELETE Request" id="8ff58fb3-84de-4969-a281-8eed473c4b46" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Checkout" path="/cart/checkout" id="fa78f2b6-1b9f-40b7-9b7d-ffb452ff4b99">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="POST" id="220807aa-38ff-4693-863c-e3040b976823" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="POST Request" id="2b4b2675-8639-4606-a0ee-83605f2f4abd" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Orders" path="/orders" id="536d8cf3-1127-4e8d-b602-43c69a8a7e73">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET" id="2346138a-d308-42d1-bc1f-d133db5c18a5" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="GET Request" id="4eff616b-e55d-4269-82cb-4a62b42f5b8b" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="OrderById" path="/orders/1" id="3561a8bf-29f7-4c13-a186-dd9721356318">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET" id="e0845542-994e-4df9-9903-49c003239ccd" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="GET Request" id="081ea49b-5d11-4e06-9430-de09800fbb15" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Reset" path="/reset" id="08d26acb-7dc1-4672-ad95-0fc29e4b1120">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="POST" id="a86d151c-c3b1-4a44-8001-eded723d64c6" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="POST Request" id="0374e947-21d3-413f-9fb4-a54075c3a491" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>${#Project#baseUrl}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="bbbe9304-77c5-4eb9-bed1-9c627bece8b2" name="1. Smoke &amp; Sanity TestSuite">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="6731940c-3e0d-4e76-b2ac-744208dd55b6" name="TC01_HealthCheck" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="GET_HealthCheck" id="d7cc8a52-12b5-410d-aa40-255e8e3db82a">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/" methodName="GET" xsi:type="con:RestRequestStep">
+          <con:restRequest name="GET_HealthCheck" id="9b757973-99fb-46c9-a204-b9b3f763b1fa" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="e908efa5-2b73-47dc-9c6c-d614ad4f8152" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="e0951cd0-1153-4f10-872e-566fd7024c8b" name="Response SLA Assertion">
+              <con:configuration>
+                <SLA>2000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="edbc3901-0b07-43d6-8d80-78703ee7db61" name="Simple Contains">
+              <con:configuration>
+                <token>Welcome to E-commerce Shopping Cart API</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="921c38ae-4e42-4f49-b120-9530ec4aa731" name="Simple Contains">
+              <con:configuration>
+                <token>API is running successfully</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="75a8c297-3a0a-4c15-b54c-32da39543926" name="TC02_GetAllProducts" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="GET_AllProducts" id="eaf18523-edd3-4c39-8f3e-2ad3017151b4">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/products" methodName="GET" xsi:type="con:RestRequestStep">
+          <con:restRequest name="GET_AllProducts" id="0ace01f4-a3d1-4d11-904c-2770c8307c71" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/products</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="a6f3f312-9048-4277-83f0-2ce1c8d3d219" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" id="25a4c8ed-0049-4064-9a39-e4dd4b4cde15" name="JsonPath Count">
+              <con:configuration>
+                <path>$</path>
+                <content>5</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="5932142b-e3e8-4f54-828f-3218698cdea4" name="Simple Contains">
+              <con:configuration>
+                <token>Laptop</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="56f2c70b-37c5-4155-bab0-400737428dbc" name="TC03_GetProduct_ValidId" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="GET_Product_1" id="5c0f6b7d-6410-4d91-9d0c-af0f311c4b80">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/products/1" methodName="GET" xsi:type="con:RestRequestStep">
+          <con:restRequest name="GET_Product_1" id="1dbc5c7f-ec6e-46ed-992f-8de44e1c1745" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/products/1</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="afda5778-5c75-47cd-b5a5-eacd6eede0b5" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="5e687545-4044-4c09-84ab-60a6988b35cc" name="Simple Contains">
+              <con:configuration>
+                <token>Laptop</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="cfdf1fde-eb04-4b72-99c1-c8b7e85f18fc" name="TC04_GetProduct_NotFound" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="GET_Product_NotFound" id="2f89986c-9d7d-4a43-80c5-20fed549750a">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/products/999" methodName="GET" xsi:type="con:RestRequestStep">
+          <con:restRequest name="GET_Product_NotFound" id="658d0953-52b3-47db-9c3e-dbf9ffc86083" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/products/999</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="47c12b88-cc42-462a-9b66-4d6ac5e95a13" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>404</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="96a1a80c-763f-4c56-ad93-055ba3846b78" name="Simple Contains">
+              <con:configuration>
+                <token>Product not found</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="677a9456-5482-4bf3-a644-f0c6b83b1c2d" name="TC05_GetCouponsList" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="GET_Coupons" id="e68055d3-5134-4f13-a14a-cee06031fdb4">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/coupons" methodName="GET" xsi:type="con:RestRequestStep">
+          <con:restRequest name="GET_Coupons" id="03ef74df-464e-4962-88f2-7c1d98bcd482" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/coupons</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="d3329510-d7e1-45bc-a36a-ae1d60d73c02" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" id="18f9f3e7-ecae-4b7c-84ac-8ef0b389f4d9" name="JsonPath Count">
+              <con:configuration>
+                <path>$</path>
+                <content>4</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+  <con:properties/></con:testSuite>
+  <con:testSuite id="aa066a51-3874-4aca-be24-b68f3ab145b8" name="2. Shopping Cart E2E Workflow TestSuite">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="899a69b8-1495-4caa-b09a-6b25c478a75e" name="TC01_CompleteCartToCheckoutLifecycle" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Step1_ResetDatabase" id="2d1215ce-044d-43bc-bf17-3583203a7eb5">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/reset" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Step1_ResetDatabase" id="5ef140e8-a929-4bcf-b35a-b6b23776b1c0" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/reset</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="19232b2e-a5d5-4dd0-9a90-bd2a896278ce" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="767bf557-fa52-4f65-8b02-519e322c053b" name="Simple Contains">
+              <con:configuration>
+                <token>Database reset successfully</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Step2_VerifyEmptyCart" id="a0f4193c-2d0b-46ff-9e19-1810db334726">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="GET" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Step2_VerifyEmptyCart" id="94cfeb2c-83e8-4853-b75f-a9315aa1e658" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="d246f59f-7bfb-475d-8d98-94ffb88b7a4f" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" id="6aa8dc93-6029-431a-8d2e-2d0051ccabc8" name="JsonPath Count">
+              <con:configuration>
+                <path>$.items</path>
+                <content>0</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Step3_AddLaptopToCart" id="8a1d4530-64a7-4475-9221-a07f1f632001">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Step3_AddLaptopToCart" id="553ff526-3122-4c93-a4c3-adff3f783619" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"product_id": 1, "quantity": 2}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="849aa570-84f3-4619-981c-1e0ad1754164" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="c66ff6d6-daa5-433b-a531-d34a40411734" name="Simple Contains">
+              <con:configuration>
+                <token>Product added to cart successfully</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Step4_AddHeadphonesToCart" id="ca98c1db-74bb-4520-bbd7-ae2af3414259">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Step4_AddHeadphonesToCart" id="51cff5d6-5f9d-4ab5-afed-fa4a155b86f5" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"product_id": 3, "quantity": 3}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="63a513e2-7988-475d-a303-2c8eee796969" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="c52e054e-ca16-4582-8761-5f9a5b94d977" name="Simple Contains">
+              <con:configuration>
+                <token>Product added to cart successfully</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Step5_VerifyCartCalculations" id="b935c0ff-ee8e-46f6-a929-3c94c79c7992">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="GET" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Step5_VerifyCartCalculations" id="f595b037-abbd-4276-8d7b-0a62fa454da9" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="996fd74a-66bf-4b27-8bfb-7578cf224227" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="5fa0dffa-40fe-467a-a652-5f97ee461945" name="JsonPath Match">
+              <con:configuration>
+                <path>$.item_count</path>
+                <content>2</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="GroovyScriptAssertion" id="ee53ff3c-8403-4fd1-97d0-dfd2c038d7c5" name="Groovy Math Subtotal Validation">
+              <con:configuration>
+                <scriptText>def response = messageExchange.responseContent
+def json = new groovy.json.JsonSlurper().parseText(response)
+assert json.items.size() == 2 : "Expected 2 items in cart"
+def expectedSubtotal = json.items.collect { it.subtotal }.sum()
+assert Math.abs(json.subtotal - expectedSubtotal) &lt; 0.01 : "Subtotal mismatch: " + expectedSubtotal + " vs " + json.subtotal
+log.info("Cart subtotal verified: " + json.subtotal)
+</scriptText>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Step6_ApplyDiscountCoupon" id="f346ad39-3b2f-4d69-a83c-de8f5af9685d">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart/apply-coupon" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Step6_ApplyDiscountCoupon" id="0f9526a5-ccdc-4ddd-833a-8492b1d888ed" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"code": "SAVE10"}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart/apply-coupon</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="3e0eb1fb-8515-4b3d-809f-a735438cad35" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="59708419-e873-4e95-a88a-71b729c0b932" name="Simple Contains">
+              <con:configuration>
+                <token>SAVE10</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Step7_VerifyDiscountedCart" id="f0f75917-45f1-4492-8549-2674684a87f8">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="GET" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Step7_VerifyDiscountedCart" id="feb3c119-5b21-458d-9616-90bd1d3baf3d" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="19230431-3a01-4301-b86d-51d00674777c" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="9b0c5593-d039-4e55-87a5-e39d1a3f385d" name="Simple Contains">
+              <con:configuration>
+                <token>SAVE10</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Step8_CheckoutCart" id="fa7830b6-3a2d-4197-ad40-86fc4bd21569">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart/checkout" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Step8_CheckoutCart" id="0d8a98ae-2ba4-40e6-be0f-8912dbc96d9e" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/cart/checkout</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="e684703f-a20a-4a5e-a92b-1f5a1afaf620" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="ef9b2a20-2bb8-403c-8e83-60ae24a87feb" name="Simple Contains">
+              <con:configuration>
+                <token>CONFIRMED</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="1ad0d38f-d38f-495b-a7a9-776c0f2add60" name="JsonPath Existence Match">
+              <con:configuration>
+                <path>$.order_id</path>
+                <content>true</content>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Step9_VerifyCartEmptyAfterCheckout" id="d428228b-5b0c-43d8-9d7c-a50161996f2d">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="GET" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Step9_VerifyCartEmptyAfterCheckout" id="70cd72db-8c82-4396-8c18-1c0eeb09d7ed" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="eea403af-af6d-4f1e-b624-fa71363797e7" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="9fb44b0c-8659-4ab7-900d-9d7c9930f47e" name="JsonPath Match">
+              <con:configuration>
+                <path>$.item_count</path>
+                <content>0</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Step10_VerifyStockDeduction" id="532fdf6e-9023-47fb-84e4-f1f0122d926e">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/products/1" methodName="GET" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Step10_VerifyStockDeduction" id="709e9c0e-231c-4a1f-b2da-1619770a5d4a" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/products/1</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="d23acf1d-f0d6-41bb-b113-1f3ce6bc3e2e" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="d9ac9fdf-76f8-43c1-af63-fb0744cf445e" name="JsonPath Match">
+              <con:configuration>
+                <path>$.stock</path>
+                <content>8</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+  <con:properties/></con:testSuite>
+  <con:testSuite id="d0f9ab54-dc75-46d0-8711-86b4d0f94ca5" name="3. Discount Coupon Functionality TestSuite">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="2aeab1d2-1e12-4ea2-87ac-9ea75a87b302" name="TC01_ApplyPercentageCoupon_SAVE10" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Reset" id="55cedf29-548c-4c5b-a973-496f1d387769">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/reset" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Reset" id="1144a4ec-fe94-4c67-ad82-18512a24b365" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/reset</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="AddItem" id="3f8f73d4-7e14-4f87-89ba-f6a3f05c9984">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="AddItem" id="fb26f333-0d38-4bbf-8c65-d072bf252275" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"product_id": 1, "quantity": 1}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Apply_SAVE10" id="2820a96d-e077-4b6a-a0e6-0575b50221f6">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart/apply-coupon" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Apply_SAVE10" id="61bbc586-d1f2-4871-bd2c-104303afc116" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"code": "SAVE10"}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart/apply-coupon</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="989f219b-1ac7-4800-a46f-510fc72f4f1b" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="17049acb-57f4-4e7b-9531-563dfcf44a33" name="Simple Contains">
+              <con:configuration>
+                <token>SAVE10</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="a867a9ca-e6cf-4fb0-aeed-689612a9c73a" name="TC02_ApplyFlatCoupon_FLAT500" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Reset" id="3baa64e2-aa9b-4601-97cd-68048c31f7e8">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/reset" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Reset" id="9d2a39ab-e59b-447d-83a2-e1d5df453099" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/reset</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="AddItem" id="dc11039a-bb4c-4254-a7fc-50079fe01d3f">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="AddItem" id="2fd9f1f3-2d78-47ae-8722-60585570564c" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"product_id": 2, "quantity": 1}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Apply_FLAT500" id="70903b19-c197-46b7-9368-42f42fa2d2e9">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart/apply-coupon" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Apply_FLAT500" id="7f158ec1-3446-4957-9b7f-3dd515b0584a" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"code": "FLAT500"}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart/apply-coupon</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="0c868a4e-45a4-4241-9d28-5595c82c4d7d" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="0f1b7b6a-03d8-482a-830f-f21c80f6710b" name="Simple Contains">
+              <con:configuration>
+                <token>FLAT500</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="50354259-ba7b-4e35-916d-d1c7d5c04dad" name="TC03_ApplyInvalidCouponCode" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Apply_NonExistent" id="4d6a5a6d-4892-4ca0-8ec0-b0f448a078f3">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart/apply-coupon" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Apply_NonExistent" id="77226920-8e69-4504-b3d4-5c2ba375f34a" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"code": "NONEXISTENT99"}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart/apply-coupon</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="347bdd70-a59d-45c0-bcf1-f3f7d1aa29d4" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>404</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="e702f0ae-c7f6-4b33-879d-599a00ca2c72" name="Simple Contains">
+              <con:configuration>
+                <token>Coupon code not found</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="1ee2dd6a-5c7a-4afa-920a-ed6ef0fca613" name="TC04_ApplyExpiredCoupon" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Apply_Expired" id="943e8fcd-9c38-455b-a507-fa6b6e30f69a">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart/apply-coupon" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Apply_Expired" id="623d3dbc-9e6b-47cc-8dc7-2f967102618d" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"code": "EXPIRED50"}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart/apply-coupon</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="50e1c2a9-36c7-4f0f-938b-016fa06a348f" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>400</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="a5e36568-cda0-40de-b22c-91ff239244fe" name="Simple Contains">
+              <con:configuration>
+                <token>Coupon code is expired or inactive</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="c8548b23-bcfa-435b-8393-c77e1fc8cbe1" name="TC05_BelowMinimumOrderValue" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Reset" id="cfebf611-513a-477a-b860-5c9b6a0ac733">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/reset" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Reset" id="06df1005-dd50-4d4a-bc9f-81d87371c9db" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/reset</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="AddLowValueItem" id="3f09e1fb-02ab-4584-a576-a2dc20e59c31">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="AddLowValueItem" id="4c6b4f86-754e-4775-95c3-3b8f6b3d05b4" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"product_id": 5, "quantity": 1}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Apply_SAVE10_Below_Min" id="e4b04d58-0d6d-4397-9f58-3cea65fea0a3">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart/apply-coupon" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Apply_SAVE10_Below_Min" id="cb9e19b1-031f-400f-babb-9482fe9de91d" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"code": "SAVE10"}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart/apply-coupon</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="e8f41607-7576-4d2f-8c66-c7fb715d825e" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>400</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="54aee26d-c056-47cd-9093-d85d24d63964" name="Simple Contains">
+              <con:configuration>
+                <token>Minimum order value</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="5def41f7-c840-4e88-ac7f-eb40f4d0ff6d" name="TC06_RemoveCoupon" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Reset" id="928b99c1-8c5e-4b41-b3e1-556e561bf076">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/reset" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Reset" id="659d925e-8abb-4645-8902-8a9ebb6baeac" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/reset</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="AddItem" id="30a839bc-aa5b-443d-bd0d-ec115d4f0c76">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="AddItem" id="82846e5f-06b3-45e9-ad93-7b2587472cac" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"product_id": 1, "quantity": 1}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="ApplyCoupon" id="2f9aa220-9509-4f01-a46a-ed0d20824cf4">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart/apply-coupon" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="ApplyCoupon" id="9daa533f-fb49-439c-899b-efb56bb357a2" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"code": "SAVE10"}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart/apply-coupon</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Delete_Coupon" id="4e21539a-40f2-403b-9f5a-90cfbf2a9d96">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart/coupon" methodName="DELETE" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Delete_Coupon" id="782da22e-5467-492d-9ece-f39cf16a1aa6" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/cart/coupon</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="10da94a3-47fa-44ee-8c7c-56b92eb91272" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="c34d6489-a503-4b23-8ddc-3d0c9b8c0b79" name="Simple Contains">
+              <con:configuration>
+                <token>Coupon removed from cart successfully</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Verify_No_Discount" id="4724dbae-5b14-4b75-9743-31209b183d70">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="GET" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Verify_No_Discount" id="63cc8fcd-8b96-4d7c-99e5-f6584da402a6" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="d4bdae9a-4a88-405d-b33b-e0386939bf3c" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="d3bcfa15-6281-479d-8408-94dc856b4499" name="JsonPath Match">
+              <con:configuration>
+                <path>$.discount_amount</path>
+                <content>0.0</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+  <con:properties/></con:testSuite>
+  <con:testSuite id="1aec4ce4-3287-42f6-8d58-6be076581434" name="4. Cart Management &amp; Deletion TestSuite">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="55fbf733-2985-4da5-b21f-342fbff364d3" name="TC01_RemoveSingleItemFromCart" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Step1_Reset" id="8993bf1b-8a4e-4b9f-b119-fa97bcc335f5">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/reset" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Step1_Reset" id="ded027fe-3bd6-4a16-8db5-ecbe33ed8273" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/reset</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Step2_AddItem" id="267e9cd9-f99c-4758-9198-7165f44fd262">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Step2_AddItem" id="e6e1342c-fb92-44ef-a5b7-e3f4ca708c8a" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"product_id": 2, "quantity": 1}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Step3_DeleteItem" id="b9d2cad5-e908-4e28-b04c-9e5f8631cf54">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart/2" methodName="DELETE" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Step3_DeleteItem" id="a8613d47-4f90-4552-acd6-6f7ee49c97cd" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/cart/2</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="4d6f5bb7-e157-4729-8a2a-ba1bfd5c6dd8" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="10da61b5-1ecf-4d00-906b-f56b94410a97" name="Simple Contains">
+              <con:configuration>
+                <token>Product removed from cart successfully</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Step4_VerifyEmpty" id="58612e68-1a51-4131-b569-3bf802f2e229">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="GET" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Step4_VerifyEmpty" id="23a361ef-0a49-487c-8aa2-782a9296090a" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="c246567c-afc9-4723-b379-a191852fe126" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="5843e9a5-ca28-4fd2-bc96-ba7906ba6b65" name="JsonPath Match">
+              <con:configuration>
+                <path>$.item_count</path>
+                <content>0</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="5cc8a325-2825-4af4-956e-c1963b1e6738" name="TC02_ClearEntireCart" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Step1_AddItem1" id="1f8103db-a532-4981-8ada-6e68b097a715">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Step1_AddItem1" id="8be54576-93db-4aa4-b938-48ba4dc01a47" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"product_id": 1, "quantity": 1}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Step2_AddItem2" id="16af710e-6b39-482e-b43e-bdc1be7888f7">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Step2_AddItem2" id="de504357-0ca6-4447-a348-8b4cf7b91290" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"product_id": 4, "quantity": 2}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Step3_ClearCart" id="b9c43b44-bd3d-4c26-b3bc-acee4eace200">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="DELETE" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Step3_ClearCart" id="6da289ab-5a07-493d-84c5-06d02cf95de4" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="87ef485f-7680-4901-9909-1a1b17c68715" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="359478ce-00d4-4db5-a7a2-333fdfe801e1" name="Simple Contains">
+              <con:configuration>
+                <token>Cart cleared successfully</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Step4_VerifyCartEmpty" id="f48a1009-e24e-436e-ac8a-c299a7d0b3df">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="GET" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Step4_VerifyCartEmpty" id="1b6d32c3-0156-444e-9c75-91f05004a8d1" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="4d4f528c-f0c9-46a4-aa3f-0834365c8043" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="d0925b78-dda3-4586-b0c1-aacb17667653" name="JsonPath Match">
+              <con:configuration>
+                <path>$.item_count</path>
+                <content>0</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+  <con:properties/></con:testSuite>
+  <con:testSuite id="80f9c911-7aca-4267-b541-32002f4efb49" name="5. Negative &amp; Boundary Validations TestSuite">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="2c51c773-bb1a-4967-b230-f66704d0728c" name="TC01_AddNonExistentProduct" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Add_Invalid_Product" id="31a7c0ad-a3c5-46d7-8276-63b57062d6c2">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Add_Invalid_Product" id="ca581ac0-49b4-4732-a3af-bd9d8e4eae33" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"product_id": 9999, "quantity": 1}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="f1b883d4-cd06-4713-8079-5a8d387a3f7c" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>404</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="f96d2d0a-5e0c-49ed-8056-c7b99ca1addb" name="Simple Contains">
+              <con:configuration>
+                <token>Product not found</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="8668129d-3a9c-4437-ba44-2ce3917393df" name="TC02_ExceedAvailableStock" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Add_Exceeding_Quantity" id="66e735d6-764d-4942-b4b4-e09a90a1db2d">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Add_Exceeding_Quantity" id="b2ccf8b4-264a-4888-95f9-eaeb512ac5b7" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"product_id": 1, "quantity": 9999}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="9ff513a9-fae3-4715-b5fa-e1bd7b3733e7" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>400</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="3c3f92bd-8a63-49d3-8ae2-ae21cbcfd864" name="Simple Contains">
+              <con:configuration>
+                <token>Insufficient stock</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="d39d9d07-405d-4088-a2fe-830c8c6ea982" name="TC03_NegativeQuantity" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Add_Negative_Quantity" id="8f059b60-62a2-4e00-b873-0acaa0e5b86b">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Add_Negative_Quantity" id="6d5969c3-ac29-4a24-a169-65f4b5438abe" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"product_id": 1, "quantity": -3}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="eb90f06d-4857-4804-8783-432101752249" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>400</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="eabc5362-bb69-4fe4-960e-a87e81279d93" name="Simple Contains">
+              <con:configuration>
+                <token>positive integer</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="34c1ccda-595f-456d-8e5e-93da0a808786" name="TC04_MissingPayloadFields" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Add_Empty_Body" id="e2950399-ccf6-4610-b99b-5f1167320869">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Add_Empty_Body" id="940d351f-992b-490c-b50d-707180041f61" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="8a6af1c4-de3a-46c0-acf1-83f0a497a460" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>400</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="0465b305-abf5-4797-b360-e9ddcb6d3661" name="TC05_UpdateItemNotInCart" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Update_Missing_CartItem" id="5d31ece2-6b8d-42a3-9f7b-901399dfa651">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart/888" methodName="PUT" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Update_Missing_CartItem" id="61860055-5f25-4c1f-b016-84e3eca4d86a" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request>{"quantity": 1}</con:request>
+            <con:originalUri>${#Project#baseUrl}/cart/888</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="6fab0f31-e597-4e6b-af1e-8e855d6b766c" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>404</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="49b5a220-049e-4675-8cae-ca9b3a77b12b" name="Simple Contains">
+              <con:configuration>
+                <token>Cart item not found</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="f0840c7d-7a1c-4373-86a7-0d565acb9bdb" name="TC06_DeleteItemNotInCart" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Delete_Missing_CartItem" id="e0f3baf6-056d-4bb2-b6b6-6d95d3f850ba">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart/888" methodName="DELETE" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Delete_Missing_CartItem" id="61aaa953-935f-482e-b3bf-692c6165c5c0" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/cart/888</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="e9de9ca1-6fdb-489b-ac8f-d4f51ad43cdd" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>404</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="9b4a281e-d6dc-4e66-b672-50891085ab6d" name="Simple Contains">
+              <con:configuration>
+                <token>Cart item not found</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="a6dd594a-44e8-4b95-a0be-61e773c352bd" name="TC07_CheckoutEmptyCart" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Clear_Before_Checkout" id="4ece3afa-1b0e-42c8-90de-c6f3570aae64">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart" methodName="DELETE" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Clear_Before_Checkout" id="03bc231f-efad-4f85-ba22-1fd69c3f3deb" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/cart</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Checkout_Empty_Cart" id="5103fef5-7400-4bef-b75f-1264b5301c1c">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/cart/checkout" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Checkout_Empty_Cart" id="1e6241ee-9b99-4f03-b372-ac7e3cda7373" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/cart/checkout</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="05317533-00dd-4137-8b3f-9b1d5b31258a" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>400</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="800e4900-51dc-4d54-98ca-189c9a1d1d25" name="Simple Contains">
+              <con:configuration>
+                <token>Cannot checkout an empty cart</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+  <con:properties/></con:testSuite>
+  <con:testSuite id="7e8caba9-dfa8-4fd3-830a-d27650c26fad" name="6. Dynamic Property Transfer TestSuite">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="8149a0a6-852c-48ae-8a4b-fe7962cf58cb" name="TC01_DynamicProductPropertyTransfer" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Reset_Database" id="c68f722b-bebc-435f-9b1e-3982317191be">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/reset" methodName="POST" xsi:type="con:RestRequestStep">
+          <con:restRequest name="Reset_Database" id="5751f90b-04a8-49f3-bba3-cc5a9a694039" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/reset</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET_Catalog" id="94939f34-f1c9-49ec-99c8-bf68d471ae24">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/products" methodName="GET" xsi:type="con:RestRequestStep">
+          <con:restRequest name="GET_Catalog" id="69adb13c-dd08-4567-bf39-4c241c87c459" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/products</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="8e0d8e77-1869-4453-8e30-d216f1d93580" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="9225e1d3-644f-445c-9301-34937f998763" name="JsonPath Existence Match">
+              <con:configuration>
+                <path>$[0].id</path>
+                <content>true</content>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET_DynamicProductDetails" id="4b859b3e-e8be-48e2-bfa2-0909bb231228">
+        <con:settings/>
+        <con:config service="Ecommerce API" resourcePath="/products/2" methodName="GET" xsi:type="con:RestRequestStep">
+          <con:restRequest name="GET_DynamicProductDetails" id="d4e645f4-d055-496d-b816-db31145b9904" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#baseUrl}</con:endpoint>
+            <con:request/>
+            <con:originalUri>${#Project#baseUrl}/products/2</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="81b5d9e9-2f9a-4832-aa17-7dac85072598" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="be97cb1f-b7ad-4224-b9eb-5948c2b31b4f" name="Simple Contains">
+              <con:configuration>
+                <token>Smartphone</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+  <con:properties/></con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+</con:soapui-project>

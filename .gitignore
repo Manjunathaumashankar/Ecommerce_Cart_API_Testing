@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# SQLite Database
+*.db
+*.sqlite3
+
+# Test & coverage artifacts
+reports/
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# SoapUI Generated Files
+soapui-errors.log
+*-FAILED.txt
+soapui-settings.xml
+.soapuios/
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Virtual environments
+venv/
+env/
+.env
+
+# Keep requirements.txt tracked
+!requirements.txt

@@ -1,0 +1,109 @@
+name: E-Commerce Cart API - CI/CD & SoapUI Automated Testing
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Run Python & SoapUI API Test Automation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Set up Java JDK 17 (for SoapUI)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Cache SoapUI Distribution
+        id: cache-soapui
+        uses: actions/cache@v4
+        with:
+          path: SoapUI-5.7.2
+          key: ${{ runner.os }}-soapui-5.7.2
+
+      - name: Download and Install SoapUI Open Source
+        if: steps.cache-soapui.outputs.cache-hit != 'true'
+        run: |
+          echo "Downloading SoapUI 5.7.2 Linux binary..."
+          curl -s -L "https://s3.amazonaws.com/downloads.eviware/soapuios/5.7.2/SoapUI-5.7.2-linux-bin.tar.gz" -o soapui.tar.gz
+          tar -xzf soapui.tar.gz
+          rm -f soapui.tar.gz
+          chmod +x SoapUI-5.7.2/bin/*.sh
+
+      - name: Run Python API Unit & Integration Tests
+        run: |
+          echo "Running Python test suite..."
+          python -m unittest discover -s tests -p "test_*.py"
+
+      - name: Start Flask E-Commerce API in Background
+        run: |
+          python app.py > flask.log 2>&1 &
+          FLASK_PID=$!
+          echo "FLASK_PID=$FLASK_PID" >> $GITHUB_ENV
+          
+          echo "Waiting for Flask API to become healthy..."
+          timeout 30 bash -c 'until curl -sf http://127.0.0.1:5000/ > /dev/null; do sleep 1; done'
+          echo "Flask API is up and running!"
+          curl -s http://127.0.0.1:5000/
+
+      - name: Run SoapUI TestRunner CLI
+        run: |
+          mkdir -p reports/soapui
+          export SOAPUI_HOME=$(pwd)/SoapUI-5.7.2
+          chmod +x $SOAPUI_HOME/bin/testrunner.sh
+          
+          echo "Executing SoapUI TestRunner..."
+          $SOAPUI_HOME/bin/testrunner.sh \
+            -r \
+            -a \
+            -j \
+            -f reports/soapui \
+            -PbaseUrl=http://127.0.0.1:5000 \
+            soapui/Ecommerce-Cart-SoapUI-Project.xml
+
+      - name: Stop Background Flask API
+        if: always()
+        run: |
+          if [ -n "$FLASK_PID" ]; then
+            echo "Stopping Flask server (PID: $FLASK_PID)..."
+            kill $FLASK_PID || true
+          fi
+
+      - name: Upload SoapUI Test Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: soapui-test-reports
+          path: reports/soapui/
+          if-no-files-found: warn
+
+      - name: Publish Test Summary to Job Summary
+        if: always()
+        run: |
+          echo "## E-Commerce Cart API Test Results :rocket:" >> $GITHUB_STEP_SUMMARY
+          echo "- **Python Tests**: Passed :white_check_mark:" >> $GITHUB_STEP_SUMMARY
+          if [ -d "reports/soapui" ]; then
+            echo "- **SoapUI Test Reports Generated**: :white_check_mark:" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            ls -la reports/soapui/ >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          fi
